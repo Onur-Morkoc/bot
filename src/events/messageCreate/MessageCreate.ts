@@ -1,7 +1,6 @@
 import { config } from '@config';
-import { PermissionFlagsBits } from 'discord.js';
 
-const MessageCreate: DiscordType.IEvent = {
+export const MessageCreate: DiscordType.IEvent = {
   name: 'messageCreate',
   execute: (client, [message]: DiscordType.ArgsOf<'messageCreate'>) => {
     const prefix = config.PREFIX;
@@ -15,5 +14,3 @@ const MessageCreate: DiscordType.IEvent = {
     command.execute({ client, message, args });
   },
 };
-
-export default MessageCreate;

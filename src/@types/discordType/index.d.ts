@@ -14,7 +14,7 @@ declare global {
       args: string[];
     }
 
-    export type EventKeys = keyof ClientEventsy;
+    export type EventKeys = keyof ClientEvents;
     export type ArgsOf<K extends EventKeys> = ClientEvents[K];
 
     export interface IEvent {
